@@ -1,0 +1,3 @@
+# Paste a complete OpenSSH PUBLIC key, never a private key.
+# Multiple keys: use a JSON array, actual newlines, or literal \n separators.
+SSH_PUBLIC_KEYS=""

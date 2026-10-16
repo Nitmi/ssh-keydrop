@@ -1,0 +1,30 @@
+{
+	"name": "ssh-keydrop",
+	"version": "0.1.0",
+	"description": "A tiny Cloudflare Worker for installing pinned SSH public keys",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "cf dev",
+		"build": "cf build",
+		"deploy": "cf deploy",
+		"typecheck": "cf workers types && tsc",
+		"test": "node --test test/*.test.mjs",
+		"prepare:release": "node scripts/prepare-release.mjs"
+	},
+	"cloudflare": {
+		"bindings": {
+			"SSH_PUBLIC_KEYS": {
+				"description": "Paste your complete OpenSSH PUBLIC key (for example, the contents of id_ed25519.pub). Never paste a private key. For multiple keys, paste a JSON array of public key strings or separate them with literal \\n. No default keys are provided."
+			}
+		}
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "beta",
+		"@types/node": "^24.19.2",
+		"cf": "^1.0.0-beta.16",
+		"typescript": "^7.0.2",
+		"vite": "^8.3.0"
+	}
+}

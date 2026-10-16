@@ -26,12 +26,10 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub user@server
 ## 一键部署
 
 <!-- deploy-button:start -->
-[![部署到 Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https%3A%2F%2Fgithub.com%2FOWNER%2Fssh-keydrop)
+[![部署到 Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https%3A%2F%2Fgithub.com%2FNitmi%2Fssh-keydrop)
 <!-- deploy-button:end -->
 
-<!-- release-note:start -->
-> 发布准备：当前按钮中的 `OWNER` 是占位符，尚不可用于克隆项目。维护者发布公开仓库前，运行 `npm run prepare:release -- https://github.com/OWNER/REPOSITORY` 生成真实按钮链接；此提示会自动删除。
-<!-- release-note:end -->
+
 
 1. 点击按钮，登录 Cloudflare，连接 GitHub 或 GitLab 并创建自己的仓库副本。
 2. 选择 Worker 名称，在 **SSH_PUBLIC_KEYS** 配置框中粘贴自己的完整 OpenSSH **公钥**。

@@ -14,5 +14,5 @@ writeFileSync(readmeUrl, readme);
 const packageUrl = new URL('../package.json', import.meta.url);
 const pkg = JSON.parse(readFileSync(packageUrl, 'utf8'));
 pkg.repository = { type: 'git', url: `${url}.git` };
-writeFileSync(packageUrl, JSON.stringify(pkg, null, 2) + '\n');
+writeFileSync(packageUrl, JSON.stringify(pkg, null, '\t') + '\n');
 console.log('Release metadata updated. Review the diff and publish the public repository before using the button.');
